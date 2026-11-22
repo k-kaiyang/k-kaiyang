@@ -10,7 +10,15 @@ Computer Science student in Interactive Media and Game Development at the Singap
 
 ## Currently working on
 
-**GAM300** (ongoing school team project, private repo). We work in 1-week sprints, review each other's pull requests, and are adding build tests.
+**AnytimeReno** (GAM300, ongoing school group project, private repo): an interior design web app with 2D and 3D room editors, drag-and-drop furniture and first-person walkthroughs.
+
+What I've built so far:
+- **Floor plan image import:** bring a floor plan image from the web page into the Unity scene, then crop it (including when rotated), rotate, move and scale it
+- **Automatic wall detection:** computer vision with OpenCV.js traces the walls in the image, merges duplicate lines and closes door and window gaps only where the image shows a frame, then turns them into editable walls
+- **Scale calibration:** click both ends of a known measurement and type its real length, and the plan rescales so every wall comes out in real millimetres
+- **Undo and redo:** snapshot-based history of up to 100 steps (Ctrl+Z / Ctrl+Y) for floor plan edits, later extended to furniture
+
+[Click here to take a look at AnytimeReno!](https://team35.dp-ext8.com/)
 
 ## Projects
 
