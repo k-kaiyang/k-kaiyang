@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flow-field pathfinding | Koh Kai Yang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="pink">
+<script>if (location.hash === '#edit') document.body.classList.add('editing');</script>
+<header class="site">
+  <div class="wrap">
+    <a class="name" href="index.html">Koh Kai Yang</a>
+    <nav><a href="index.html#work">Work</a><a href="index.html#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>Parry Everything: flow-field pathfinding</h1>
+    <p class="facts"><span class="chip">DigiPen CSD1451</span><span class="chip">2025</span><span class="chip">C++</span><span class="chip">Alpha Engine</span> <a href="https://github.com/Siestasies/GAM150_PARRY_EVERYTHING">View code →</a></p>
+    <p>Parry Everything is a top-down roguelite where you time parries against every enemy. I made every enemy find the player through randomly generated dungeons.</p>
+  </section>
+
+  <figure class="media"><img src="assets/flowfield-cover.png" alt="Parry Everything dungeon" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><figcaption class="slot">Add a screenshot: save it as <code>assets/flowfield-cover.png</code><br>A generated dungeon with enemies chasing the player</figcaption></figure>
+
+  <div class="step">
+    <h3>Problem</h3>
+    <p>Every enemy in a dungeon had to reach the player around walls and lava. The dungeon layout changes every run.</p>
+  </div>
+
+  <div class="step">
+    <h3>Constraint</h3>
+    <p>Many enemies chase one target at the same time, so running a separate search for each one would repeat the same work.</p>
+  </div>
+
+  <div class="step">
+    <h3>What I tested</h3>
+    <p class="todo">Add: what you checked, for example enemies near lava, or rooms joined by narrow corridors.</p>
+  </div>
+
+  <div class="step">
+    <h3>What failed</h3>
+    <p class="todo">Add: one thing that didn't work at first.</p>
+  </div>
+
+  <div class="step">
+    <h3>What I changed</h3>
+    <p>I built one field centred on the player that every enemy shares, in three steps:</p>
+    <ul class="plain">
+      <li><strong>Cost field:</strong> each tile gets a cost, and walls are blocked.</li>
+      <li><strong>Integration field:</strong> spreading out from the player tile, each tile records its cheapest total cost to reach the player.</li>
+      <li><strong>Flow field:</strong> each tile points to whichever of its 8 neighbours is cheapest, so an enemy just follows the arrow under its feet.</li>
+    </ul>
+    <p>Enemies stop once they are close to the player. I also wrote the game's sound manager (3 audio groups, volume and mute) and a particle system that reuses a pool of particles for walking dust and lava effects.</p>
+  </div>
+  <figure class="media"><img src="assets/flowfield-arrows.png" alt="Flow-field arrows on dungeon tiles" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><figcaption class="slot">Add a screenshot: save it as <code>assets/flowfield-arrows.png</code><br>Optional: debug view with flow arrows on the tiles</figcaption></figure>
+
+  <div class="step">
+    <h3>What happened</h3>
+    <p>The flow field steers all 3 enemy types (normal, explosive and boss). My parts came to 966 lines of C++ across 6 files.</p>
+  </div>
+</main>
+
+<footer><div class="wrap"><a href="index.html">← Back to all work</a></div></footer>
+</body>
+</html>
