@@ -18,7 +18,3 @@ Computer Science student in Interactive Media and Game Development at the Singap
 |---|---|---|
 | [Umapyoi Engine](https://github.com/Siestasies/GAM200-250_UmapyoiEngine) | C++20/OpenGL 2D engine, editor and elemental action game | Finite state machine system running 40 Lua scripts, A* pathfinding, FMOD audio, enemy AI scripts |
 | [Parry Everything](https://github.com/Siestasies/GAM150_PARRY_EVERYTHING) | 2D roguelite built on timing-based parries | Flow-field pathfinding, sound manager, particle system |
-
-## Experience
-
-**Intern, Nanyang Technological University** (Oct 2021 – Dec 2021): fixed 6 bugs and revamped 2 features in a C# educational game where users solve challenge maps with code blocks.
