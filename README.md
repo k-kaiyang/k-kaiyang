@@ -36,3 +36,20 @@ What I've built so far:
 | [Android game](https://github.com/ri3n/MGP_Assignment) (Nov 2020 – Feb 2021) | Mobile game in Java with its own entity and state system | Trap entity, combo system, high-score storage, a Facebook page screen, and a fix for a crash when resuming from pause |
 | [Studio Project 2](https://github.com/sp2team/ourstudioproject) (Feb – Mar 2020) | Team car game in C++ | Car selection, skins and textures, acceleration and camera controls |
 | [Studio Project 1](https://github.com/hanyemi09/SP1-Framework) (Aug 2019) | Team game in C++ | Level splash screens, per-level spawn points, map code and main menu sound |
+
+## What's in this repository
+
+This repo holds the source for my [portfolio site](https://k-kaiyang.github.io/k-kaiyang/), served by GitHub Pages. It is plain HTML and CSS with no build step.
+
+| File or folder | What it is |
+|---|---|
+| `index.html` | Home page: intro, case-study cards, AnytimeReno, About and Contact |
+| `umapyoi-state-machine.html` | Case study: the C++ state machine system and enemy AI in Umapyoi Engine |
+| `astar-pathfinding.html` | Case study: A* pathfinding with staggered re-paths and a search cap |
+| `flow-field.html` | Case study: flow-field pathfinding in Parry Everything |
+| `style.css` | Dark theme, with one accent colour per case study |
+| `assets/` | Gameplay videos and screenshots used on the pages |
+| `KohKaiYang_Resume.docx` | My resume, linked from the site's Download resume button |
+| `README.md` | This file, which also appears on my GitHub profile |
+
+To view the site locally, download the repo and open `index.html` in a browser.
