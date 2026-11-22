@@ -2,11 +2,86 @@
 <html lang="en-SG">
 <head>
   <meta charset="utf-8">
-  <title>Moved: Koh Kai Yang portfolio</title>
-  <meta http-equiv="refresh" content="0; url=https://k-kaiyang.github.io/">
-  <link rel="canonical" href="https://k-kaiyang.github.io/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Koh Kai Yang | C++ Gameplay and Engine Programmer</title>
+  <meta name="description" content="Portfolio of Koh Kai Yang, Computer Science student at Singapore Institute of Technology and DigiPen. C++ engine systems, pathfinding, state machines and audio.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <p>My portfolio has moved to <a href="https://k-kaiyang.github.io/">k-kaiyang.github.io</a>.</p>
+<script>if (location.hash === '#edit') document.body.classList.add('editing');</script>
+<header class="site">
+  <div class="wrap">
+    <a class="name" href="index.html">Koh Kai Yang</a>
+    <nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>C++ gameplay and engine programmer</h1>
+    <p>I'm a Computer Science student at Singapore Institute of Technology (SIT) and DigiPen Institute of Technology Singapore. I write the code that makes games behave: how enemies find their way, how characters switch between states, and how sound plays.</p>
+    <a class="button" href="#work">See my work</a>
+    <a class="button secondary" href="KohKaiYang_Resume.docx">Download resume</a>
+  </section>
+
+  <section id="work">
+    <h2>Case studies</h2>
+    <div class="cards">
+      <a class="card" href="umapyoi-state-machine.html">
+        <div class="thumb"><img src="assets/umapyoi-cover.png" alt="Umapyoi Engine editor" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><span>assets/umapyoi-cover.png</span></div>
+        <div class="body"><span class="tag">Flagship · Engine systems</span>
+        <h3>Umapyoi Engine: state machine and enemy AI</h3>
+        <p>A C++ system that runs 40 Lua gameplay scripts, plus 15 enemy state scripts on top of it.</p></div>
+      </a>
+      <a class="card cyan" href="astar-pathfinding.html">
+        <div class="thumb filled"><video src="assets/astar-pathing.mp4" muted autoplay loop playsinline preload="metadata"></video></div>
+        <div class="body"><span class="tag">Constrained · Frame budget</span>
+        <h3>A* pathfinding without frame spikes</h3>
+        <p>Staggered 0.5 s re-path timers and a 2,000-step search cap. It drives 17 enemy and boss scripts.</p></div>
+      </a>
+      <a class="card pink" href="flow-field.html">
+        <div class="thumb"><img src="assets/flowfield-cover.png" alt="Parry Everything dungeon" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><span>assets/flowfield-cover.png</span></div>
+        <div class="body"><span class="tag">Skill · Algorithms</span>
+        <h3>Parry Everything: flow-field pathfinding</h3>
+        <p>One shared field steers every enemy around walls and lava in generated dungeons.</p></div>
+      </a>
+    </div>
+  </section>
+
+  <section id="current">
+    <h2>Currently working on</h2>
+    <div class="step">
+      <h3>AnytimeReno (GAM300, school group project)</h3>
+      <p>An interior design web app built in Unity for WebGL, with 2D and 3D room editors and drag-and-drop furniture. My parts:</p>
+      <ul class="plain">
+        <li><strong>Floor plan image import:</strong> bring a floor plan image into the scene, then crop (including when rotated), rotate, move and scale it.</li>
+        <li><strong>Automatic wall detection:</strong> OpenCV.js traces the walls in the image and turns them into editable walls, closing door and window gaps only where the image shows a frame.</li>
+        <li><strong>Scale calibration:</strong> click both ends of a known measurement and type its length, and every wall comes out in real millimetres.</li>
+        <li><strong>Undo and redo:</strong> snapshot history of up to 100 steps for floor plan and furniture edits.</li>
+      </ul>
+      <p><a class="next" href="https://team35.dp-ext8.com/">Try AnytimeReno in your browser →</a></p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p>On Umapyoi Engine, a custom C++20 2D game engine built as a DigiPen team project, I wrote 3,677 lines of C++: the FMOD sound system, the finite state machine (FSM) system and the A* pathfinder. On Parry Everything, a team project, I built the enemy pathfinding, sound manager and particle system.</p>
+    <p>During my Nanyang Polytechnic diploma, I interned at Nanyang Technological University (NTU) for 3 months. There I fixed 6 bugs and revamped 2 features in a C# educational game where users solve challenge maps with code blocks.</p>
+    <p>Now I'm on my GAM300 team project. We run 1-week sprints, review each other's pull requests in Git, and are adding build tests.</p>
+    <p class="skills"><span>C++</span><span>C#</span><span>Lua</span><span>FMOD</span><span>Git</span><span>Figma</span><span>Claude</span><span>Gemini</span></p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>I'm looking for a software engineering or game programming internship under SIT's Integrated Work Study Programme (IWSP), starting May 2027.</p>
+    <ul class="plain">
+      <li>Email: <a href="mailto:kohkaiyang@gmail.com">kohkaiyang@gmail.com</a></li>
+      <li>LinkedIn: <a href="https://www.linkedin.com/in/koh-ky">linkedin.com/in/koh-ky</a></li>
+      <li>Code: <a href="https://github.com/Siestasies/GAM200-250_UmapyoiEngine">Umapyoi Engine</a> and <a href="https://github.com/Siestasies/GAM150_PARRY_EVERYTHING">Parry Everything</a> on GitHub</li>
+    </ul>
+  </section>
+</main>
+
+<footer><div class="wrap">© 2026 Koh Kai Yang. Team projects © DigiPen Institute of Technology Singapore; my contributions are credited in each repository.</div></footer>
 </body>
 </html>

@@ -2,7 +2,7 @@
 
 Computer Science student in Interactive Media and Game Development at the Singapore Institute of Technology and DigiPen Institute of Technology Singapore. I mostly work in C++, building engine systems such as state machines, pathfinding and audio.
 
-[Portfolio](https://k-kaiyang.github.io/)
+[Portfolio](https://k-kaiyang.github.io/k-kaiyang/)
 
 [LinkedIn](https://www.linkedin.com/in/koh-ky)
 
