@@ -22,7 +22,7 @@
     <p>Enemies of different sizes had to chase the player around obstacles without making the game stutter.</p>
   </section>
 
-  <figure class="media"><img src="assets/astar-cover.png" alt="Enemies routing around obstacles" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><figcaption class="slot">Add a screenshot: save it as <code>assets/astar-cover.png</code><br>Enemies routing around walls, ideally with debug paths drawn</figcaption></figure>
+  <figure class="media filled"><video src="assets/astar-pathing.mp4" controls muted playsinline preload="metadata"></video><figcaption class="caption">Enemies following A* paths in Umapyoi Engine</figcaption></figure>
 
   <div class="step">
     <h3>Problem</h3>
@@ -55,7 +55,6 @@
       <li>Gave each enemy a re-path timer (0.5 s by default) that starts at a random offset. The timer subtracts the interval instead of resetting to 0, so the offset survives.</li>
     </ul>
   </div>
-  <figure class="media"><img src="assets/astar-debug.png" alt="Debug view of A* paths" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><figcaption class="slot">Add a screenshot: save it as <code>assets/astar-debug.png</code><br>Optional: before and after frame-time graph or profiler view</figcaption></figure>
 
   <div class="step">
     <h3>What happened</h3>
