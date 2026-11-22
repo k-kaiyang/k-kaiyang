@@ -28,13 +28,13 @@
     <h2>Case studies</h2>
     <div class="cards">
       <a class="card" href="umapyoi-state-machine.html">
-        <div class="thumb"><img src="assets/umapyoi-cover.png" alt="Umapyoi Engine gameplay" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><span>assets/umapyoi-cover.png</span></div>
+        <div class="thumb"><img src="assets/umapyoi-cover.png" alt="Umapyoi Engine editor" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><span>assets/umapyoi-cover.png</span></div>
         <div class="body"><span class="tag">Flagship · Engine systems</span>
         <h3>Umapyoi Engine: state machine and enemy AI</h3>
         <p>A C++ system that runs 40 Lua gameplay scripts, plus 15 enemy state scripts on top of it.</p></div>
       </a>
       <a class="card cyan" href="astar-pathfinding.html">
-        <div class="thumb"><img src="assets/astar-cover.png" alt="Enemies pathfinding around obstacles" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><span>assets/astar-cover.png</span></div>
+        <div class="thumb filled"><video src="assets/astar-pathing.mp4" muted autoplay loop playsinline preload="metadata"></video></div>
         <div class="body"><span class="tag">Constrained · Frame budget</span>
         <h3>A* pathfinding without frame spikes</h3>
         <p>Staggered 0.5 s re-path timers and a 2,000-step search cap. It drives 17 enemy and boss scripts.</p></div>
@@ -45,6 +45,21 @@
         <h3>Parry Everything: flow-field pathfinding</h3>
         <p>One shared field steers every enemy around walls and lava in generated dungeons.</p></div>
       </a>
+    </div>
+  </section>
+
+  <section id="current">
+    <h2>Currently working on</h2>
+    <div class="step">
+      <h3>AnytimeReno (GAM300, school group project)</h3>
+      <p>An interior design web app built in Unity for WebGL, with 2D and 3D room editors and drag-and-drop furniture. My parts:</p>
+      <ul class="plain">
+        <li><strong>Floor plan image import:</strong> bring a floor plan image into the scene, then crop (including when rotated), rotate, move and scale it.</li>
+        <li><strong>Automatic wall detection:</strong> OpenCV.js traces the walls in the image and turns them into editable walls, closing door and window gaps only where the image shows a frame.</li>
+        <li><strong>Scale calibration:</strong> click both ends of a known measurement and type its length, and every wall comes out in real millimetres.</li>
+        <li><strong>Undo and redo:</strong> snapshot history of up to 100 steps for floor plan and furniture edits.</li>
+      </ul>
+      <p><a class="next" href="https://team35.dp-ext8.com/">Try AnytimeReno in your browser →</a></p>
     </div>
   </section>
 
