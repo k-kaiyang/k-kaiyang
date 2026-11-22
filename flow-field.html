@@ -6,7 +6,8 @@
   <title>Flow-field pathfinding | Koh Kai Yang</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="pink">
+<script>if (location.hash === '#edit') document.body.classList.add('editing');</script>
 <header class="site">
   <div class="wrap">
     <a class="name" href="index.html">Koh Kai Yang</a>
@@ -17,12 +18,11 @@
 <main class="wrap">
   <section class="hero">
     <h1>Parry Everything: flow-field pathfinding</h1>
-    <p class="facts">Team of 5 · DigiPen CSD1451 · 2025 · C++ on DigiPen Alpha Engine · <a href="https://github.com/Siestasies/GAM150_PARRY_EVERYTHING">View code</a></p>
+    <p class="facts"><span class="chip">DigiPen CSD1451</span><span class="chip">2025</span><span class="chip">C++</span><span class="chip">Alpha Engine</span> <a href="https://github.com/Siestasies/GAM150_PARRY_EVERYTHING">View code →</a></p>
     <p>Parry Everything is a top-down roguelite where you time parries against every enemy. I made every enemy find the player through randomly generated dungeons.</p>
   </section>
 
-  <!-- Replace with a screenshot of a dungeon, ideally with flow arrows drawn on the tiles. -->
-  <div class="media">Screenshot: a generated dungeon, ideally with flow-field arrows on the tiles</div>
+  <figure class="media"><img src="assets/flowfield-cover.png" alt="Parry Everything dungeon" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><figcaption class="slot">Add a screenshot: save it as <code>assets/flowfield-cover.png</code><br>A generated dungeon with enemies chasing the player</figcaption></figure>
 
   <div class="step">
     <h3>Problem</h3>
@@ -54,6 +54,7 @@
     </ul>
     <p>Enemies stop once they are close to the player. I also wrote the game's sound manager (3 audio groups, volume and mute) and a particle system that reuses a pool of particles for walking dust and lava effects.</p>
   </div>
+  <figure class="media"><img src="assets/flowfield-arrows.png" alt="Flow-field arrows on dungeon tiles" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><figcaption class="slot">Add a screenshot: save it as <code>assets/flowfield-arrows.png</code><br>Optional: debug view with flow arrows on the tiles</figcaption></figure>
 
   <div class="step">
     <h3>What happened</h3>

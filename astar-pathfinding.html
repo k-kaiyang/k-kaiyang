@@ -6,7 +6,8 @@
   <title>A* pathfinding | Koh Kai Yang</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="cyan">
+<script>if (location.hash === '#edit') document.body.classList.add('editing');</script>
 <header class="site">
   <div class="wrap">
     <a class="name" href="index.html">Koh Kai Yang</a>
@@ -17,12 +18,11 @@
 <main class="wrap">
   <section class="hero">
     <h1>A* pathfinding without frame spikes</h1>
-    <p class="facts">Umapyoi Engine · Team of 6 · C++20 · <a href="https://github.com/Siestasies/GAM200-250_UmapyoiEngine/blob/main/Engine/pathfinding/GridPathfinder.cpp">GridPathfinder.cpp</a> · <a href="https://github.com/Siestasies/GAM200-250_UmapyoiEngine/blob/main/Engine/ECS/Systems/PathFindingSystem.cpp">PathFindingSystem.cpp</a></p>
+    <p class="facts"><span class="chip">Umapyoi Engine</span><span class="chip">C++20</span><span class="chip">A*</span> <a href="https://github.com/Siestasies/GAM200-250_UmapyoiEngine/blob/main/Engine/pathfinding/GridPathfinder.cpp">GridPathfinder.cpp</a> · <a href="https://github.com/Siestasies/GAM200-250_UmapyoiEngine/blob/main/Engine/ECS/Systems/PathFindingSystem.cpp">PathFindingSystem.cpp</a></p>
     <p>Enemies of different sizes had to chase the player around obstacles without making the game stutter.</p>
   </section>
 
-  <!-- Replace with a GIF of enemies routing around walls, ideally with debug paths drawn. -->
-  <div class="media">GIF: enemies routing around obstacles, with debug paths drawn</div>
+  <figure class="media"><img src="assets/astar-cover.png" alt="Enemies routing around obstacles" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><figcaption class="slot">Add a screenshot: save it as <code>assets/astar-cover.png</code><br>Enemies routing around walls, ideally with debug paths drawn</figcaption></figure>
 
   <div class="step">
     <h3>Problem</h3>
@@ -55,13 +55,14 @@
       <li>Gave each enemy a re-path timer (0.5 s by default) that starts at a random offset. The timer subtracts the interval instead of resetting to 0, so the offset survives.</li>
     </ul>
   </div>
+  <figure class="media"><img src="assets/astar-debug.png" alt="Debug view of A* paths" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><figcaption class="slot">Add a screenshot: save it as <code>assets/astar-debug.png</code><br>Optional: before and after frame-time graph or profiler view</figcaption></figure>
 
   <div class="step">
     <h3>What happened</h3>
     <p>The pathfinder drives 17 Lua AI scripts for the 3 demon types and the 3-phase boss.</p>
   </div>
 
-  <p><a href="flow-field.html">Next: flow-field pathfinding →</a></p>
+  <p><a class="next" href="flow-field.html">Next: flow-field pathfinding →</a></p>
 </main>
 
 <footer><div class="wrap"><a href="index.html">← Back to all work</a></div></footer>

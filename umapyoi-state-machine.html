@@ -6,7 +6,8 @@
   <title>Umapyoi Engine state machine | Koh Kai Yang</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="purple">
+<script>if (location.hash === '#edit') document.body.classList.add('editing');</script>
 <header class="site">
   <div class="wrap">
     <a class="name" href="index.html">Koh Kai Yang</a>
@@ -17,12 +18,11 @@
 <main class="wrap">
   <section class="hero">
     <h1>Umapyoi Engine: state machine and enemy AI</h1>
-    <p class="facts">Team of 6 · DigiPen CSD2401/CSD2451 · 2025 – 2026 · C++20, Lua, FMOD · <a href="https://github.com/Siestasies/GAM200-250_UmapyoiEngine">View code</a></p>
+    <p class="facts"><span class="chip">DigiPen CSD2401/CSD2451</span><span class="chip">2025 – 2026</span><span class="chip">C++20</span><span class="chip">Lua</span><span class="chip">FMOD</span> <a href="https://github.com/Siestasies/GAM200-250_UmapyoiEngine">View code →</a></p>
     <p>Umapyoi is a custom C++ 2D engine and a top-down action game where you fight Fire, Water and Wind demons. I built the system that decides what every character is doing, and wrote the demons' behaviour on top of it.</p>
   </section>
 
-  <!-- Replace this box with: <figure class="media"><video src="assets/umapyoi.mp4" controls muted></video></figure> -->
-  <div class="media">Gameplay video or GIF: demons switching between chase, attack and stunned</div>
+  <figure class="media"><img src="assets/umapyoi-cover.png" alt="Umapyoi Engine gameplay" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><figcaption class="slot">Add a screenshot: save it as <code>assets/umapyoi-cover.png</code><br>Gameplay: demons switching between chase, attack and stunned</figcaption></figure>
 
   <div class="step">
     <h3>Problem</h3>
@@ -44,6 +44,7 @@
     <p class="todo">Add: one thing that didn't work at first, and how you found out.</p>
   </div>
 
+  <figure class="media"><img src="assets/umapyoi-states.png" alt="Lua state scripts or the editor" onload="this.parentNode.classList.add('filled')" onerror="this.remove()"><figcaption class="slot">Add a screenshot: save it as <code>assets/umapyoi-states.png</code><br>Optional: a Lua state script, or enemies mid-attack</figcaption></figure>
   <div class="step">
     <h3>What I changed</h3>
     <ul class="plain">
@@ -58,7 +59,7 @@
     <p>40 player, enemy and boss state scripts run on the system in the finished game. In total I wrote 3,677 lines of C++ in the engine, credited to me in the repository's team README.</p>
   </div>
 
-  <p><a href="astar-pathfinding.html">Next: A* pathfinding without frame spikes →</a></p>
+  <p><a class="next" href="astar-pathfinding.html">Next: A* pathfinding without frame spikes →</a></p>
 </main>
 
 <footer><div class="wrap"><a href="index.html">← Back to all work</a></div></footer>
