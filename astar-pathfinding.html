@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en-SG">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A* pathfinding | Koh Kai Yang</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="site">
+  <div class="wrap">
+    <a class="name" href="index.html">Koh Kai Yang</a>
+    <nav><a href="index.html#work">Work</a><a href="index.html#contact">Contact</a></nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="hero">
+    <h1>A* pathfinding without frame spikes</h1>
+    <p class="facts">Umapyoi Engine · Team of 6 · C++20 · <a href="https://github.com/Siestasies/GAM200-250_UmapyoiEngine/blob/main/Engine/pathfinding/GridPathfinder.cpp">GridPathfinder.cpp</a> · <a href="https://github.com/Siestasies/GAM200-250_UmapyoiEngine/blob/main/Engine/ECS/Systems/PathFindingSystem.cpp">PathFindingSystem.cpp</a></p>
+    <p>Enemies of different sizes had to chase the player around obstacles without making the game stutter.</p>
+  </section>
+
+  <!-- Replace with a GIF of enemies routing around walls, ideally with debug paths drawn. -->
+  <div class="media">GIF: enemies routing around obstacles, with debug paths drawn</div>
+
+  <div class="step">
+    <h3>Problem</h3>
+    <p>Each enemy needs a path to the player that goes around walls, and bigger enemies can't squeeze through gaps that small ones can.</p>
+  </div>
+
+  <div class="step">
+    <h3>Constraint</h3>
+    <p>A path search costs time every frame. If many enemies search at once, or one keeps searching for a target it can't reach, frame time suffers.</p>
+  </div>
+
+  <div class="step">
+    <h3>What I tested</h3>
+    <p class="todo">Add: how many enemies were on screen, and what frame time you saw before and after.</p>
+  </div>
+
+  <div class="step">
+    <h3>What failed</h3>
+    <p>At first every enemy re-planned on the same frame. My first fix also broke: resetting each timer to 0 after a re-plan wiped out the offset that kept enemies apart, so they lined up again.</p>
+    <p class="todo">Add: what this looked like in the game, for example a visible stutter every half second.</p>
+  </div>
+
+  <div class="step">
+    <h3>What I changed</h3>
+    <ul class="plain">
+      <li>8-direction A* on a grid, using a priority queue and straight-line (Euclidean) distance as the estimate.</li>
+      <li>Precomputed clearance for each cell, so the search only uses cells wide enough for that enemy.</li>
+      <li>Capped each search at 2,000 steps, so an unreachable target can't stall a frame.</li>
+      <li>Smoothed paths by skipping waypoints that are in direct line of sight.</li>
+      <li>Gave each enemy a re-path timer (0.5 s by default) that starts at a random offset. The timer subtracts the interval instead of resetting to 0, so the offset survives.</li>
+    </ul>
+  </div>
+
+  <div class="step">
+    <h3>What happened</h3>
+    <p>The pathfinder drives 17 Lua AI scripts for the 3 demon types and the 3-phase boss.</p>
+  </div>
+
+  <p><a href="flow-field.html">Next: flow-field pathfinding →</a></p>
+</main>
+
+<footer><div class="wrap"><a href="index.html">← Back to all work</a></div></footer>
+</body>
+</html>
